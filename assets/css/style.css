@@ -1,0 +1,570 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #D82129;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00cc95;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #D82129;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #00c28e;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Disable AOS delay on mobile
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+#AlurWBS {
+  /* background-image: url('../img/alurWBS.png');
+  background-size: cover;
+  background-position: center center; */
+  width: 100%;
+  position: relative;
+}
+
+
+#whistleblowerGP {
+  background-image: url('../img/whisletblowerGP.png');
+  /* Ganti 'nama-gambar.jpg' dengan gambar Anda */
+  background-size: cover;
+  /* Untuk menutupi seluruh area elemen */
+  background-position: center;
+  /* Untuk mengatur posisi gambar ke tengah elemen */
+  height: 75vh;
+  /* Mengatur tinggi elemen menjadi 85% dari tinggi tampilan (viewport height) */
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+#gambarGP {
+  display: block;
+  margin: 0 auto;
+  /* Mengatur gambar ke tengah secara horizontal */
+  text-align: center;
+  /* Mengatur gambar ke tengah secara vertikal (jika diperlukan) */
+}
+
+#KriteriaPengaduan {
+  width: 100%;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  top: 18%;
+  border-radius: 50px;
+  background: #fff;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+@media only screen and (max-width: 1632px) {
+  #header {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 3%;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  #header {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  #header {
+    margin: 0;
+  }
+
+  .navbar {
+    width: 60vw;
+  }
+}
+
+
+#header.header-scrolled {
+  background: #fff;
+  top: 0;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+}
+
+#header .logo {
+  overflow: hidden;
+  padding: 16px 30px 12px 30px;
+  background: #D82129;
+}
+
+#header .logo h1 {
+  font-size: 26px;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+@media (max-width: 992px) {
+  #header.header-scrolled {
+    background: #fff;
+    border-radius: 0;
+  }
+
+  #header .header-container {
+    background: #fff;
+    border-radius: 50px;
+  }
+
+  #header .logo {
+    padding-left: 0;
+  }
+
+  #header .logo h1 {
+    font-size: 24px;
+  }
+}
+
+.bodyPengaduan {
+  Padding-top: 8%;
+  Padding-bottom: 12%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.containerPengaduan {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 600px;
+  border-radius: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 4rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  border-radius: 15px;
+}
+
+input[type="file"] {
+  display: none;
+  border-radius: 15px;
+}
+
+.custom-file-upload {
+  display: flex;
+  text-align: center;
+  padding: 3% 20%;
+  cursor: pointer;
+  color: white;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(20, 20, 20, 0.70);
+  margin-top: 5%;
+}
+
+.btnPengaduan {
+  background: #5AAC4D;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 23vw;
+
+  display: flex;
+  text-align: center;
+  padding: 3% 20%;
+  cursor: pointer;
+  color: white;
+  justify-content: center;
+  border-radius: 10px;
+  background: #5AAC4D;
+}
+
+.bawah-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bawah-wrapper>.upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#teks {
+  text-align: center;
+}
+
+#file {
+  text-align: center;
+}
+
+.bawah-wrapper>.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-top: 7%;
+  border-radius: 20px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+/**
+* Mobile Navigation (KAYAKNYA INI DIAPUS DEH, CUMA KLO GW APUS SBLM GW KIRIM NTR GABISA DIUNDO, COBA CEKIN NIF)
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(29, 28, 31, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #36343a;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #D82129;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #D82129;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+
+
+
+
+/* ABOUT WBS */
+
+.page {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.page>.wrapper {
+  width: 1000px;
+}
+
+.page>.wrapper>#siWBS {
+  width: 370px;
+  margin: 25px 20px 0px 0px;
+  float: left;
+}
+
+.page>.wrapper p {
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+  color: #D82129;
+  text-align: justify;
+  font-family: Open Sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 37px;
+  /* 77.083% */
+}
+
+
+.text-center{
+  margin-top: 15% !important;
+}
+
+
+.footerGambar {
+  width: 100%;
+  height: auto;
+}
+
+/* BODY PENGADUAN */
+#bodyPengaduan {
+  display: flex;
+  justify-content: center;
+  margin: 7%;
+}
+
+/* KONTAK */
+.section1-btn2 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #D82129;
+  color: #fff;
+  background-color: #D82129;
+}
+
+.section1-btn2:hover {
+  background: #fff;
+  border: 2px solid #fff;
+  color: #D82129;
+  box-shadow: 0 0 10px 1px #D82129;
+}
+
+.wa-button {
+  display: flex;
+  align-items: center;
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.5s;
+  height: 50px;
+}
+
+.wa-button:hover {
+  background-color: white;
+  border: solid 3px #25d366 ;
+  color: #25d366;
+}
+
+.wa-logo {
+  width: 24px;
+  /* Lebar logo WhatsApp */
+  height: 24px;
+  /* Tinggi logo WhatsApp */
+  margin-right: 10px;
+  /* Jarak antara logo dan nomor */
+}
+
+.gmail-button {
+  display: inline-block;
+  background-color: #D14836;
+  /* Warna merah Gmail */
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  /* Border radius untuk tombol */
+  text-decoration: none;
+  margin-bottom: 10px;
+  /* Jarak bawah antara tombol Gmail dan WhatsApp (sesuaikan sesuai kebutuhan) */
+  display: flex;
+  align-items: center;
+  height: 50px;
+  transition: 0.5s;
+}
+
+.gmail-button:hover {
+  background-color: white;
+  border: solid 3px #D14836;
+  color: #D14836;
+}
+
+.gmail-logo {
+  width: 24px;
+  /* Lebar logo Gmail */
+  height: 24px;
+  /* Tinggi logo Gmail */
+  margin-right: 10px;
+  /* Jarak antara logo dan teks */
+}

@@ -1,0 +1,22 @@
+.section1-btn2 {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 25px;
+    transition: 0.5s;
+    margin-top: 10px;
+    border: 2px solid #D82129;
+    color: #fff;
+    background-color: #D82129;
+}
+
+.section1-btn2:hover {
+    background: #fff;
+    border: 2px solid #fff;
+    color: #D82129;
+    box-shadow: 0 0 10px 1px #D82129;
+}
