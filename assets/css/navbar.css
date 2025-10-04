@@ -10,8 +10,6 @@
     align-items: center;
 }
 
-
-
 /**
   * Desktop Navigation
   */
@@ -143,5 +141,31 @@
 
     .navbar .dropdown .dropdown:hover>ul {
         left: -100%;
+    }
+}
+
+/* 📱 Responsif untuk tablet */
+@media (max-width: 768px) {
+
+    .navbar a,
+    .navbar a:focus {
+        font-size: 14px;
+        /* perkecil font */
+        padding: 8px 15px;
+        /* perkecil padding */
+    }
+
+    .navbar ul {
+        margin: 2%;
+    }
+}
+
+/* 📱 Responsif untuk HP kecil */
+@media (max-width: 480px) {
+
+    .navbar a,
+    .navbar a:focus {
+        font-size: 12px;
+        padding: 6px 10px;
     }
 }
