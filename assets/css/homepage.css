@@ -98,7 +98,7 @@
   # Sections General
   --------------------------------------------------------------*/
 section {
-    padding: 30px 0;
+    padding: 5px 0;
     overflow: hidden;
 }
 
@@ -168,7 +168,7 @@ section {
     margin-top: 10px;
     border: 2px solid #D82129;
     color: #fff;
-    background-color: #D82129;
+    background-color: #7b9605;
 }
 
 .section1 .section1-btn:hover {

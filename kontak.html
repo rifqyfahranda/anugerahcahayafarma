@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Kontak</title>
+    <title>Kontak - Anugerah Cahaya Farma</title>
     <meta content name="description">
     <meta content name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/logo whistleblower.svg" rel="icon">
+    <link href="assets/img/logoacf.png" rel="icon">
 
     <!-- Google Fonts -->
     <link
@@ -32,38 +32,45 @@
     <link href="assets/css/navbar.css" rel="stylesheet">
     <link href="assets/css/kontak.css" rel="stylesheet">
 
+    <!-- Leaflet Map -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <link rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
     <style>
-      #map {
-          height: 45vh;
+    #map {
+      height: 45vh;
+    }
+     /* Logo */
+    .logo-container {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 10px;
+    }
+
+    .logo-container img {
+      max-height: 120px;
+      width: auto;
+    }
+
+    @media (max-width: 768px) {
+      .logo-container img {
+        max-height: 90px;
       }
+    }
   </style>
+
   </head>
 
   <body>
 
-    <!-- ======= Hero Section ======= -->
-    <section>
-      <div class="d-flex justify-content-between p-2" id="navigation-bar">
+    <!-- ======= Logo di atas navbar ======= -->
+    <div class="logo-container">
+      <img src="assets/img/logoacf.png" alt="Anugerah Cahaya Farma"
+        class="img-fluid">
+    </div>
 
-        <div class="logonavbar">
-          <img src="assets/img/logo tth.svg" class="gambar1">
-        </div>
-
-        <div class="logonavbar">
-          <img src="assets/img/logo whistleblower.svg" class="gambar2">
-        </div>
-
-        <div class="logonavbar">
-          <img src="assets/img/logo telkom.svg" class="gambar3">
-        </div>
-
-      </div>
-    </section><!-- End Hero -->
-
-    <!-- ======= Header ======= -->
+    <!-- ======= Header / Navbar ======= -->
     <header id="header" class="fixed-top d-flex align-items-center">
       <div class="container">
         <div
@@ -73,91 +80,85 @@
               <li><a class="nav-link scrollto"
                   href="index.html">Beranda</a></li>
               <li><a class="nav-link scrollto"
-                  href="caraPengaduan.html">Pengaduan</a></li>
-              <li><a class="nav-link scrollto"
-                  href="tentang.html">Tentang</a></li>
+                  href="tentang.html">Produk</a></li>
               <li><a class="nav-link scrollto active"
                   href="kontak.html">Kontak</a></li>
-              <li><a class="nav-link scrollto" href="faq.html">FAQ</a></li>
             </ul>
-          </nav><!-- .navbar -->
-        </div><!-- End Header Container -->
+          </nav>
+        </div>
       </div>
-    </header><!-- End Header -->
+    </header>
+    <!-- End Header -->
 
     <main id="main">
 
       <section id="about" class="about"
         style="text-align: center; padding-bottom: 10%;">
         <div class="container"
-          style="padding-top: 5%; padding-left: 10%; padding-right: 10%;">
+          style="padding-top: 17%; padding-left: 10%; padding-right: 10%;">
           <div class="row content">
             <h1 class="text-center"
-              style="padding-bottom:10px; font-weight: bold; color:red"
-              data-aos="fade-right" data-aos-delay="100">Hubungi
-              Kami</h1>
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100"
+              style="padding-bottom:10px; font-weight: bold; color:rgb(0, 0, 0)"
+              data-aos="fade-up" data-aos-delay="100">Hubungi Kami</h1>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"
               style="text-align: left;">
               <img style="width: 100%;" src="assets/img/virtual-assit.png">
             </div>
+
             <div class="col-lg-5" style="padding-top:5%; padding-left:5%;"
-              data-aos="fade-left" data-aos-delay="200">
+              data-aos="fade-up" data-aos-delay="200">
               <h4 style="font-weight: 700; text-align: left;">Customer
                 Service</h4>
-              <a class="wa-button" href="https://wa.me/6281234567890"
+              <a class="wa-button" href="https://wa.me/6282150347898"
                 target="_blank">
                 <img class="wa-logo bi-whatsapp" alt="WhatsApp Logo">
-                (+62) 812-2483-7500
+                (+62) 821-5034-7898
               </a><br>
+
               <h4 style="font-weight: 700; text-align: left;">Email</h4>
-              <a class="gmail-button" href="mailto:cstth@telkom.co.id">
+              <a class="gmail-button"
+                href="mailto:anugerahcahayafarma@gmail.com">
                 <img class="gmail-logo bi-envelope" alt="Gmail Logo">
-                cstth@telkom.co.id
+                anugerahcahayafarma@gmail.com
               </a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <div id="map"></div>
-        <script>
-        var map = L.map('map').setView([-6.8700177, 107.5893272], 17);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+      <!-- ======= Map Section ======= -->
+      <div id="map"></div>
+      <script>
+      var map = L.map('map').setView([-6.3035, 106.7028], 17);
 
-        var marker = L.marker([-6.8700177, 107.5893272]).addTo(map);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      var marker = L.marker([-6.3035, 106.7028]).addTo(map);
+      marker.bindPopup("<b>Anugerah Cahaya Farma</b><br>Apartemen Akasa BSD City<br>Jl. Jombang Astek No.5, Serpong");
     </script>
 
-        <a href="#"
-          class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    </main>
 
-        <!-- Vendor JS Files -->
-        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-        <script src="assets/vendor/aos/aos.js"></script>
-        <script
-          src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-        <script src="assets/vendor/php-email-form/validate.js"></script>
+    <a href="#"
+      class="back-to-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
 
-        <!-- Template Main JS File -->
-        <script src="assets/js/main.js"></script>
-        <script>
-        // Fungsi JavaScript untuk mengarahkan ke Google Play Store saat gambar diklik
-        document.getElementById('gambarGP').addEventListener('click', function() {
-          // Ganti URL di bawah ini sesuai dengan URL Google Play Store yang sesuai dengan aplikasi Anda
-          var googlePlayURL = "https://play.google.com/store/apps/details?id=com.example.aplikasi";
-    
-          // Arahkan browser ke Google Play Store
-          window.location.href = googlePlayURL;
-        });
-      </script>
-      </body>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-      <footer>
-        <img class="footerGambar" src="assets/img/fppter beranda.png">
-      </footer>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
 
-    </html>
+  </body>
+
+</html>

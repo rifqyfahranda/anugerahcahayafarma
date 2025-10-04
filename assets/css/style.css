@@ -16,7 +16,7 @@ a:hover {
   text-decoration: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -469,8 +469,8 @@ input[type="file"] {
 }
 
 
-.text-center{
-  margin-top: 15% !important;
+.text-center {
+  margin-top: 5% !important;
 }
 
 
@@ -524,7 +524,7 @@ input[type="file"] {
 
 .wa-button:hover {
   background-color: white;
-  border: solid 3px #25d366 ;
+  border: solid 3px #25d366;
   color: #25d366;
 }
 
