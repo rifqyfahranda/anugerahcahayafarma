@@ -40,8 +40,11 @@
     <style>
     #map {
       height: 45vh;
+      margin-bottom: 1px; /* jarak bawah supaya tidak nempel */
+      border-radius: 10px; /* opsional, biar lebih halus */
     }
-     /* Logo */
+
+    /* Logo atas */
     .logo-container {
       text-align: center;
       margin-top: 20px;
@@ -58,8 +61,85 @@
         max-height: 90px;
       }
     }
-  </style>
 
+    /* Card kontak */
+    .contact-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    /* logo di dalam card */
+    .contact-card img {
+      max-height: 100px; /* ACF lebih besar */
+      margin-bottom: 15px;
+    }
+
+    .contact-card h4 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .wa-button {
+      display: inline-block;
+      background: #25d366;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .wa-button i {
+      margin-right: 6px;
+    }
+
+    .maps-button {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    .maps-button i {
+      margin-right: 6px;
+    }
+
+    .gmail-button {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .gmail-button i {
+      margin-right: 6px;
+    }
+
+    /* Untuk 2 nomor ACF sejajar */
+    .phone-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .phone-row .wa-button {
+      flex: 1;
+      text-align: center;
+    }
+  </style>
   </head>
 
   <body>
@@ -90,54 +170,89 @@
     </header>
     <!-- End Header -->
 
-    <main id="main">
+    <main id="main" style="margin-top:120px;">
 
-      <section id="about" class="about"
-        style="text-align: center; padding-bottom: 10%;">
-        <div class="container"
-          style="padding-top: 17%; padding-left: 10%; padding-right: 10%;">
-          <div class="row content">
-            <h1 class="text-center"
-              style="padding-bottom:10px; font-weight: bold; color:rgb(0, 0, 0)"
-              data-aos="fade-up" data-aos-delay="100">Hubungi Kami</h1>
+      <div class="container">
+        <h1 class="text-center mb-5" style="font-weight:bold;">Hubungi Kami</h1>
+        <div class="row justify-content-center">
 
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"
-              style="text-align: left;">
-              <img style="width: 100%;" src="assets/img/virtual-assit.png">
-            </div>
+          <!-- PT Diaru -->
+          <div class="col-lg-5 contact-card order-2 order-lg-1"
+            data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/diaru.png" alt="Diaru Logo">
+            <h4>PT Diaru Kencana Cakrawala</h4>
+            <p><em>Distributor Resmi Produk BIOSCboon</em></p>
+            <p><strong>Telepon/WhatsApp:</strong></p>
+            <a class="wa-button" href="https://wa.me/6281222267767"
+              target="_blank">
+              <i class="bi bi-whatsapp"></i> 0812-2226-7767
+            </a>
+            <br><br>
+            <p><strong>Alamat:</strong></p>
+            <a class="maps-button"
+              href="https://www.google.com/maps/search/?api=1&query=-6.222891471964254,106.84708977244482"
+              target="_blank">
+              <i class="bi bi-geo-alt-fill"></i> Lihat Alamat di Google Maps
+            </a>
+          </div>
 
-            <div class="col-lg-5" style="padding-top:5%; padding-left:5%;"
-              data-aos="fade-up" data-aos-delay="200">
-              <h4 style="font-weight: 700; text-align: left;">Customer
-                Service</h4>
+          <!-- PT ACF -->
+          <div class="col-lg-5 contact-card order-1 order-lg-2"
+            data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/logoacf.png" alt="ACF Logo">
+            <h4>PT Anugerah Cahaya Farma</h4>
+            <br>
+            <p><strong>Telepon/WhatsApp:</strong></p>
+
+            <div class="phone-row">
               <a class="wa-button" href="https://wa.me/6282150347898"
                 target="_blank">
-                <img class="wa-logo bi-whatsapp" alt="WhatsApp Logo">
-                (+62) 821-5034-7898
-              </a><br>
-
-              <h4 style="font-weight: 700; text-align: left;">Email</h4>
-              <a class="gmail-button"
-                href="mailto:anugerahcahayafarma@gmail.com">
-                <img class="gmail-logo bi-envelope" alt="Gmail Logo">
-                anugerahcahayafarma@gmail.com
+                <i class="bi bi-whatsapp"></i> 0821-5034-7898
               </a>
-            </div>
+              <a class="wa-button" href="https://wa.me/628128497037"
+                target="_blank">
+                <i class="bi bi-whatsapp"></i> 0812-8497-037
+              </a>
+            </div> <br>
+
+            <p><strong>Email:</strong></p>
+            <a class="gmail-button" href="mailto:anugerahcahayafarma@gmail.com">
+              <i class="bi bi-envelope"></i> anugerahcahayafarma@gmail.com
+            </a>
           </div>
+
         </div>
-      </section>
+      </div>
 
       <!-- ======= Map Section ======= -->
-      <div id="map"></div>
+      <div class="container mt-5 mb-5">
+        <h3 class="text-center mb-3" style="font-weight:bold;">Lokasi Perusahaan
+          dan Distributor</h3>
+        <div id="map"></div>
+      </div>
+
       <script>
-      var map = L.map('map').setView([-6.3035, 106.7028], 17);
+      const DIARU_LAT = -6.222891471964254;
+      const DIARU_LNG = 106.84708977244482;
+
+      const ACF_LAT = -6.3035;
+      const ACF_LNG = 106.7028;
+
+      var map = L.map('map');
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
-      var marker = L.marker([-6.3035, 106.7028]).addTo(map);
-      marker.bindPopup("<b>Anugerah Cahaya Farma</b><br>Apartemen Akasa BSD City<br>Jl. Jombang Astek No.5, Serpong");
+      var diaruMarker = L.marker([DIARU_LAT, DIARU_LNG]).addTo(map);
+      diaruMarker.bindPopup("<b>PT Diaru Kencana Cakrawala</b><br>Jl. Dr. Saharjo No.216, Tebet, Jakarta Selatan");
+
+      var acfMarker = L.marker([ACF_LAT, ACF_LNG]).addTo(map);
+      acfMarker.bindPopup("<b>PT Anugerah Cahaya Farma</b><br>Apartemen Akasa BSD City<br>Jl. Jombang Astek No.5, Serpong");
+
+      // auto zoom supaya kedua marker terlihat
+      var group = new L.featureGroup([diaruMarker, acfMarker]);
+      map.fitBounds(group.getBounds(), { padding: [50, 50] });
     </script>
 
     </main>
@@ -160,5 +275,4 @@
     <script src="assets/js/main.js"></script>
 
   </body>
-
 </html>
